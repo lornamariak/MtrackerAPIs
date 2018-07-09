@@ -5,7 +5,7 @@ requests =[]
 
 app.route('/users/requests',methods=['POST'])
 def addRequest():
-    userRequest = [{'Equipment Name': request.json['Equipment Name']}]
+    userRequest = {'Equipment Name': request.json['Equipment Name']}
     requests.append(userRequest)
     return jsonify({'requests': requests})
 
